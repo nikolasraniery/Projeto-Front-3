@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <title>NShoes</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="Logo NShoes" />
+        </div>
+        <ul>
+          <li>HOMEM</li>
+          <li>MULHER</li>
+          <li>CRIANÇA</li>
+          <li>CUSTOMIZAR</li>
+        </ul>
+        <div class="search">
+          <label for="search-input">
+            <img src="./assets/icon-search.svg" alt="Pesquisar" />
+          </label>
+          <input
+            type="search"
+            id="search-input"
+            name="search-input"
+            placeholder="Pesquisar"
+          />
+        </div>
+        <button class="sacola" id="cart-button">
+          <img src="./assets/icon-bag.svg" alt="Imagem sacola de compras" />
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="value">
+        <h1>
+          Tênis Esportivo <br />
+          Para Corrida Top
+        </h1>
+        <p>
+          Esse tênis tem o intuito de te deixar ainda mais fitness, focado, e
+          musculoso.
+        </p>
+        <span>R$ 1.000,00</span>
+        <button>COMPRAR</button>
+      </section>
+      <section class="images">
+        <div class="main-image">
+          <img
+            src="./assets/tenis-1-ampliado.png"
+            alt="Imagem tenis principal"
+          />
+        </div>
+        <div class="caroussel">
+          <img src="./assets/tenis-1-galeria.png" alt="imagem tenis 1" />
+          <img src="./assets/tenis-2-galeria.png" alt="imagem tenis 2" />
+          <img src="./assets/tenis-3-galeria.png" alt="imagem tenis 3" />
+        </div>
+      </section>
+    </main>
+
+    <div class="cart-container" id="cart-container">
+      <button onclick="closeCart()">X</button>
+    </div>
+
+    <footer>
+      <img src="./assets/img-video.png" alt="video anuncio tenis" />
+      <div class="contact">
+        <a href="#">FACEBOOK</a>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">YOUTUBE</a>
+        <a href="#">TWITTER</a>
+      </div>
+      <button>
+        <span> EXPLORE MAIS </span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 13H17.586L12.293 18.293L13.707 19.707L21.414 12L13.707 4.29303L12.293 5.70703L17.586 11H3V13Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </footer>
+  </body>
+</html>
