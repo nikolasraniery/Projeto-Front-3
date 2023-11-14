@@ -10,25 +10,27 @@
 html {
     font-size: 62.5%;
     height: 100%;
+    width: 100%;
 }
 
 body {
     width: 100%;
-    height: 100vh;
+
 }
 
 
-main {
+view {
     display: flex;
     align-content: center;
     justify-content: space-evenly;
     gap: 7.2rem;
-
+    margin: 0 auto;
     width: 100%;
     max-width: 2560px;
+    height: calc(100vh - 176px);
 }
 
-main section {
+view section {
     padding-top: 8rem;
 }
 
@@ -36,6 +38,9 @@ header {
     width: 100%;
     height: 88px;
     position: absolute;
+
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -80,6 +85,7 @@ nav ul {
     font-weight: 700;
     color: black;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 nav ul li {
@@ -115,9 +121,10 @@ nav .sacola {
 .search {
     display: flex;
     padding-left: 0.8rem;
-    width: 300px;
+    width: 30rem;
     height: 45px;
     border: 1px solid lightgray;
+    align-items: center;
     border-radius: 8px;
     gap: 0.8rem;
     box-shadow: 3px 4px 8px lightgrey;
@@ -127,11 +134,11 @@ nav .sacola {
 .search input {
     outline: none;
     border: none;
-    width: 220px;
+    width: 22rem;
 }
 
 .search img {
-    width: 24px;
+    width: 2.4rem;
 }
 
 .value {
@@ -198,6 +205,17 @@ nav .sacola {
     transition: 0.2s all;
 }
 
+.view-image {
+    max-width: 100%;
+    /* display: flex; */
+    overflow: hidden;
+}
+
+.view-image img {
+    width: 100%;
+    height: 100%;
+}
+
 .images {
     display: flex;
     flex-direction: column;
@@ -207,21 +225,24 @@ nav .sacola {
 }
 
 .caroussel {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     width: 100%;
+    padding: 0 8px;
     margin-bottom: 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .caroussel img {
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 4%, rgba(52, 51, 68, 0.5004202364539565) 44%, rgba(52, 51, 68, 0.7217087518601191) 100%);
+    width: 100%;
 }
 
 footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 
     width: 100%;
     max-width: 2560px;
@@ -321,19 +342,387 @@ footer button:hover::before {
     width: 100%;
 }
 
-.cart-container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 0;
 
-    background-color: #000;
 
-    transition: 0.2s;
-    z-index: 50;
+@media all and (max-width: 519px) {
+
+
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .logo {
+        scale: 70%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .search {
+        scale: 70%;
+    }
+
+    .search input {
+        scale: 70%;
+        font-size: 2.8rem;
+    }
+
+    /* .search {
+        margin-left: auto;
+        width: 4rem;
+        transition: 0.4s;
+
+    } */
+
+
+    .search input {
+        width: 80%;
+    }
+
+    view {
+        flex-direction: column-reverse;
+        height: inherit;
+    }
+
+
+    view .value {
+        /* justify-content: center; */
+        align-items: center;
+        width: 20rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    view .value h1 {
+        margin-top: -16rem;
+        width: 100%;
+        font-size: 3rem;
+        justify-content: center;
+    }
+
+    view .value span {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    view .value button {
+        scale: 60%;
+        margin-bottom: 1.2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    footer img {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer .contact {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    footer button {
+        max-width: 100%;
+    }
 }
 
-.cart-container.open {
-    width: 40rem;
+@media all and (max-width: 520px) {
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .logo {
+        scale: 70%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .search {
+        scale: 70%;
+    }
+
+    .search input {
+        scale: 70%;
+        font-size: 2.8rem;
+    }
+
+    /* .search {
+        margin-left: auto;
+        width: 4rem;
+        transition: 0.4s;
+
+    } */
+
+
+    .search input {
+        width: 80%;
+    }
+
+    view {
+        flex-direction: column-reverse;
+        height: inherit;
+    }
+
+
+    view .value {
+        /* justify-content: center; */
+        align-items: center;
+        width: 20rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    view .value h1 {
+        margin-top: -16rem;
+        width: 100%;
+        font-size: 3rem;
+        justify-content: center;
+    }
+
+    view .value span {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    view .value button {
+        scale: 60%;
+        margin-bottom: 1.2rem;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+
+    footer .contact {
+        margin: 20px;
+        gap: 1.5rem;
+    }
+
+    footer .contact a {
+        font-size: 1.2rem;
+    }
+
+    footer button {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .logo {
+        scale: 70%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .search {
+        scale: 70%;
+    }
+
+    .search input {
+        scale: 70%;
+        font-size: 2.8rem;
+    }
+
+    .search input {
+        width: 80%;
+    }
+
+    view {
+        flex-direction: column-reverse;
+        height: inherit;
+    }
+
+    view .images {
+        justify-content: center;
+        flex: 1;
+    }
+
+    view .images .view-image {
+        width: 50%;
+        padding-top: 16px;
+    }
+
+
+    view .value {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        /* margin-top: 3rem; */
+        padding: 0;
+
+    }
+
+    view .value h1 {
+        margin-top: 0;
+        width: 100%;
+        font-size: 3rem;
+        justify-content: center;
+    }
+
+    view .value span {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    view .value button {
+        scale: 60%;
+        margin-bottom: 3.2rem;
+    }
+
+    footer {
+        width: 100%;
+        flex-direction: column;
+        margin-top: auto;
+    }
+
+
+    footer .contact {
+        margin: 4rem;
+        gap: 1.5rem;
+    }
+
+    footer .contact a {
+        font-size: 1.5rem;
+    }
+
+    footer button {
+        width: 100%;
+    }
+
+}
+
+@media all and (min-width: 769px) and (max-width: 1023px) {
+
+    header {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scale: 100%;
+        padding: 24px;
+    }
+
+    nav .logo img {
+        width: 50px;
+    }
+
+    nav ul {
+        scale: 70%;
+        gap: 2rem;
+    }
+
+    .search {
+        scale: 75%;
+        width: 100%;
+        gap: 0;
+    }
+
+    .search input {
+        scale: 75%;
+        font-size: 2.8rem;
+        width: 100%;
+    }
+
+
+    .search input {
+        width: 100%;
+    }
+
+    view {
+        flex-direction: column-reverse;
+        height: inherit;
+        gap: 0;
+    }
+
+    view .images {
+        /* margin-top: 14rem; */
+        flex: 1;
+    }
+
+    view .caroussel {
+        margin-bottom: 0;
+    }
+
+
+    view .value {
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 32px 0;
+    }
+
+    view .value h1 {
+        width: 100%;
+        font-size: 3rem;
+        justify-content: center;
+    }
+
+    view .value span {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    view .value button {
+        scale: 60%;
+    }
+
+    footer {
+        flex-direction: row;
+        /* gap: 4rem; */
+        width: 100%;
+    }
+
+    /* footer img {
+        width: 100%;
+        height: 100%;
+    } */
+
+    footer .contact {
+        font-size: .2rem;
+        flex-direction: row;
+    }
+
+    footer button {
+        font-size: 2rem;
+        max-width: 100%;
+    }
 }
